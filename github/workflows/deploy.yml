@@ -26,15 +26,15 @@ jobs:
           npm install
           npm run build
 
-      # Merge outputs into public-final
+      # Merge outputs into public
       - run: |
-          mkdir -p public-final
-          cp -r home/dist/* public-final/
-          mkdir -p public-final/docs
-          cp -r decap-template/dist/* public-final/docs/
+          mkdir -p public
+          cp -r home/dist/* public/
+          mkdir -p public/docs
+          cp -r decap-template/dist/* public/docs/
 
       # Deploy merged output
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public-final
+          publish_dir: ./public

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoDiffLabs | Engineer Smarter Models</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Check for dark mode preference immediately to prevent FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                850: '#1e293b', 
+                950: '#020617', // Deepest slate/midnight
+              }
+            },
+            animation: {
+              'blob': 'blob 10s infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #ffffff;
+        color: #0f172a;
+        overflow-x: hidden;
+      }
+      html.dark body {
+        background-color: #020617; /* Slate 950 / Midnight */
+        color: #f8fafc;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #94a3b8; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b; 
+      }
+
+      /* Utilities for glass effects */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        border: 1px solid rgba(203, 213, 225, 0.5); /* slate-300 */
+      }
+      
+      html.dark .glass-panel {
+        background: rgba(0, 0, 0, 0.4); /* Darker, more transparent */
+        border: 1px solid rgba(255, 255, 255, 0.15); /* sharper border */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+
+  <link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-Bw4ug0i1.js"></script>
+</head>
+  <body class="antialiased transition-colors duration-500 dark:bg-[#020617] bg-white text-slate-900 dark:text-white">
+    <div id="root"></div>
+    <!-- Added entry point for Vite build -->
+  </body>
+</html>
