@@ -5,6 +5,8 @@ backend:
   auth_scope: repo
   client_id: Ov23li8aeOf71Xru85St
   login: true
+  base_url: https://cms-oauth-proxy.anirudhxplorer.workers.dev/
+  auth_endpoint: "/auth"
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
