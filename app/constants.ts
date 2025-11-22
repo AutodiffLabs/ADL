@@ -78,3 +78,7 @@ export const TAB_CONTENT: Record<TabOption, ContentData> = {
 };
 
 export const LOGO_PATH = "https://raw.githubusercontent.com/AutodiffLabs/autodifflabs.github.io/refs/heads/main/adl.png";
+export const USER_NAME = "AutodiffLabs";
+export const REPO = "autodifflabs.github.io";
+export const DOC_FOLDER = "docs";
+export const PROJECT_FOLDER = "projects";

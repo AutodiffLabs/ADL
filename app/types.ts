@@ -30,3 +30,8 @@ export interface ContentData {
   image?: string;
   linkText?: string;
 }
+
+export interface GitHubFile {
+  name: string
+  content: string
+}
