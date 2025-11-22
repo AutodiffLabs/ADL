@@ -22,7 +22,7 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
     id: 2,
     title: "Visual Reasoning",
     description: "Zero-shot classification with multimodal attention heads.",
-    imageUrl: './public/himalayas.png'
+    imageUrl: './src/assets/himalayas.png'
     // imageUrl: "https://picsum.photos/1600/900?random=2"
   },
   {
@@ -70,4 +70,4 @@ export const TAB_CONTENT: Record<TabOption, ContentData> = {
   },
 };
 
-export const LOGO_PATH = "./public/adl.png";
+export const LOGO_PATH = "./src/assets/adl.png";
