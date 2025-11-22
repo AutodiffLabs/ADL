@@ -1,0 +1,45 @@
+backend:
+  name: github
+  repo: AutodiffLabs/autodifflabs.github.io # your GitHub repo
+  branch: main                 # branch to commit content
+  auth_scope: repo
+  client_id: Ov23li8aeOf71Xru85St
+
+media_folder: "assets/uploads"   # folder where uploaded images go
+public_folder: "/assets/uploads" # path for images in site
+
+collections:
+  - name: "blogs"
+    label: "Blog Posts"
+    folder: "content/blogs"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Cover Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "docs"
+    label: "Docs Pages"
+    folder: "content/docs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "hypergrad_docs"
+    label: "Hypergrad Docs"
+    folder: "content/hypergrad_docs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  
+backend:
+  name: github
+  repo: AutodiffLabs/autodifflabs.github.io
+  branch: main
+  auth_scope: repo
+  login: true
